@@ -1,0 +1,49 @@
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: clamp(38px, 4vw, 42px);
+  padding: clamp(8px, 1.2vw, 10px) clamp(12px, 1.6vw, 16px);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: clamp(0.75rem, 1.1vw, 0.8125rem);
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.action-btn--block {
+  width: 100%;
+}
+
+.action-btn--neutral {
+  background: #808080;
+  color: #ffffff;
+}
+
+.action-btn--neutral:hover {
+  background: #666666;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.action-btn--primary {
+  background: #0f4f9b;
+  color: #ffffff;
+}
+
+.action-btn--primary:hover {
+  background: #0c3f7c;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.action-btn:focus-visible {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}

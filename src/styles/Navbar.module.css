@@ -1,0 +1,956 @@
+/* -----------------------------------------------------------------------
+   Top utility bar + main navigation
+   (extracted from globals.css)
+   ----------------------------------------------------------------------- */
+.topBar {
+  background: #000000;
+  min-height: 40px;
+  padding-block: 4px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1200;
+}
+
+.accessibilityBar {
+  background: #f4f6fa;
+  border-bottom: 1px solid #dce3ef;
+}
+
+.accessibilityBar :global(.container) {
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+}
+
+.accessibilityLinks {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+.accessibilityLink {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.accessibilityLink:hover {
+  color: #ffffff !important;
+}
+
+.accessibilityDivider {
+  width: 1px;
+  height: 12px;
+  background: #c6cfdd;
+}
+
+.fontSizeControls {
+  margin-left: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8.3px;
+}
+
+.fontSizeButton {
+  border: 1px solid #c6cfdd;
+  background: #ffffff;
+  border-radius: 4.15px;
+  padding: 5.18px 6.22px;
+  font-size: 11px;
+  font-family: 'Inter', sans-serif;
+  line-height: 1;
+  color: #1f2a3d;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fontSizeButton:nth-child(2) {
+  padding-inline: 9.33px;
+}
+
+.fontSizeButton:hover {
+  background: #f4f6fa;
+  border-color: #a8b8d8;
+}
+
+.topBar :global(.container) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+}
+
+.topBarLeft {
+  display: flex;
+  align-items: center;
+}
+
+.topBarRight {
+  display: flex;
+  align-items: center;
+  gap: 13.5px;
+}
+
+.topBar a,
+.topBar span {
+  font-size: 11px;
+  font-weight: 300;
+  font-family: 'Poppins', sans-serif;
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  gap: 5.2px;
+  transition: color var(--transition-fast);
+}
+
+.topBar a:hover {
+  color: #ffffff;
+}
+
+.topBar .profileDropdown a {
+  color: #374151 !important;
+  font-size: 0.82rem !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  padding: 10px 20px !important;
+  transition: color 0.15s, background-color 0.15s !important;
+}
+
+.topBar .profileDropdown a:hover {
+  color: var(--primary) !important;
+  background-color: #f9fafb !important;
+  padding-left: 20px !important;
+}
+
+.topBar .profileDropdown span {
+  color: inherit !important;
+  font-size: inherit !important;
+  display: inline-flex !important;
+  gap: 0 !important;
+}
+
+.topBar :global(i) {
+  font-size: 0.75rem;
+}
+
+.languageToggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.languageToggleButtons {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.languageToggleButton {
+  border: none;
+  background: transparent;
+  padding: 4px 8px;
+  font-size: 11px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  line-height: 1.2;
+}
+
+.languageToggleContent {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.languageFlagIcon {
+  width: 16px;
+  height: 11px;
+  flex-shrink: 0;
+  border-radius: 1px;
+  box-shadow: 0 0 0 0.5px rgba(255, 255, 255, 0.15);
+}
+
+.languageToggleButton:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.languageToggleButtonActive {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.languageToggleButton + .languageToggleButton {
+  border-left: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* Mobile menu has a light background, so the language toggle needs dark text/borders */
+.languageToggleMobile {
+  color: rgba(17, 24, 39, 0.7);
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.languageToggleMobile .languageToggleButtons {
+  border-color: rgba(17, 24, 39, 0.25);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+.languageToggleMobile .languageToggleButton {
+  color: rgba(17, 24, 39, 0.7);
+  min-width: 0;
+  justify-content: center;
+}
+
+.languageToggleMobile .languageToggleContent {
+  justify-content: center;
+  white-space: nowrap;
+  align-items: baseline;
+  padding-top: 2px;
+}
+
+.languageToggleMobile .languageToggleButton:hover {
+  color: #111827;
+  background: rgba(17, 24, 39, 0.06);
+}
+
+.languageToggleMobile .languageToggleButtonActive {
+  color: #111827;
+  background: rgba(17, 24, 39, 0.1);
+}
+
+.languageToggleMobile .languageToggleButton + .languageToggleButton {
+  border-left-color: rgba(17, 24, 39, 0.25);
+}
+
+.languageToggleMobile .languageFlagIcon {
+  box-shadow: 0 0 0 0.5px rgba(17, 24, 39, 0.15);
+}
+
+.topBarDivider {
+  width: 1px;
+  height: 14.5px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.siteHeader {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1100;
+  background: var(--white);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 1200px) {
+  .navbar {
+    height: 85px;
+  }
+
+  .navLogoImage {
+    height: 77.27px !important;
+    width: auto !important;
+    max-height: none !important;
+  }
+
+  .navGovtLogo {
+    height: 68px !important;
+  }
+}
+
+@media (max-width: 1199px) {
+  .navbar {
+    height: auto;
+    min-height: var(--nav-height);
+    padding-block: 8px;
+  }
+
+  .siteHeader {
+    position: sticky;
+  }
+}
+
+.navbar :global(.container) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.navLogo {
+  /* display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0; */
+}
+
+.navLogoImage {
+  width: 100%;
+  height: auto;
+  max-height: 58px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+@media (max-width: 1199px) {
+  .navLogo {
+    display: block;
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: min(100%, 200px);
+  }
+
+  .navLogoImage {
+    width: auto;
+    max-width: 100%;
+    height: 38px;
+    max-height: 38px;
+  }
+
+  .accessibilityBar :global(.container) {
+    min-height: 42px;
+    align-items: flex-start;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .accessibilityLinks {
+    gap: 8px;
+  }
+
+  .topBar .accessibilityDivider,
+  .topBar .topBarDivider {
+    display: none;
+  }
+
+  .topBar .accessibilityLink {
+    display: none;
+  }
+
+  .fontSizeControls {
+    display: none;
+  }
+}
+
+.navMenu {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+}
+
+.navMenu .navLink {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-body);
+  padding: 8px 8px;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.navMenu .navLink:hover,
+.navMenu .navLink:global(.active) {
+  color: var(--primary);
+  background: var(--primary-light);
+}
+
+@media (min-width: 1200px) {
+  .navMenu {
+    background: #8A231C;
+    border: 0.5px solid rgba(218, 221, 216, 0.4);
+    border-radius: 9999px;
+    padding: 12px clamp(10px, 1.2vw, 22px);
+    gap: clamp(8px, 1.4vw, 32px);
+    height: auto;
+    min-height: 45px;
+    width: fit-content;
+    margin-inline: auto;
+  }
+
+  .navMenu .navLink {
+    font-size: clamp(12.5px, 0.8vw, 14px);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #ffffff !important;
+    padding: 0;
+    border-radius: 0;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: clamp(6px, 0.5vw, 12px);
+  }
+
+  .navMenu .navLink:hover,
+  .navMenu .navLink:global(.active) {
+    color: #f9c000 !important;
+    background: transparent !important;
+  }
+
+  .navMenu .navLink:global(.active) {
+    font-weight: 600;
+  }
+
+  .navMenu .navLink :global(svg) {
+    color: #ffffff;
+    font-size: 10px;
+  }
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 10px;
+}
+
+.navGovtLogos {
+  display: flex;
+  align-items: center;
+  /* gap: 10px; */
+}
+
+.navGovtLogo {
+  display: block;
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+.navToggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 6px;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast);
+}
+
+@media (max-width: 1199px) {
+  .navToggle {
+    display: flex;
+    position: relative;
+    z-index: 10060;
+  }
+}
+
+.navToggle:hover {
+  background: var(--bg-light);
+}
+
+.navToggle span {
+  display: block;
+  height: 2px;
+  background: var(--text-dark);
+  border-radius: var(--radius-full);
+  transition: all var(--transition);
+}
+
+.navToggle span:nth-child(1) {
+  width: 22px;
+}
+
+.navToggle span:nth-child(2) {
+  width: 16px;
+}
+
+.navToggle span:nth-child(3) {
+  width: 22px;
+}
+
+.navToggle:global(.active) span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+  width: 22px;
+}
+
+.navToggle:global(.active) span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.navToggle:global(.active) span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+  width: 22px;
+}
+
+.navItemDropdown {
+  position: relative;
+}
+
+.productSearchNavItem {
+  position: relative;
+}
+
+.productSearchDropdownHidden {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+.productSearchDropdown {
+  width: min(360px, calc(100vw - 32px));
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(179, 84, 0, 0.14);
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.14);
+  padding: 14px;
+  color: #363b42;
+}
+
+.productSearchLabel {
+  display: block;
+  margin: 0 0 9px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #9a4b14;
+}
+
+.productSearchField {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  min-height: 42px;
+  padding: 0 12px;
+  border: 1px solid rgba(179, 84, 0, 0.16);
+  border-radius: 999px;
+  background: #fff7ef;
+}
+
+.productSearchField :global(svg) {
+  flex-shrink: 0;
+  font-size: 0.86rem;
+  color: var(--primary);
+}
+
+.productSearchField input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.productSearchField input::placeholder {
+  color: #9ca3af;
+}
+
+.productSearchSuggestionsTitle {
+  margin: 12px 2px 7px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #9a4b14;
+}
+
+.productSearchResults {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 290px;
+  overflow-y: auto;
+  margin-top: 5px;
+  padding-top: 1px;
+  padding-right: 2px;
+}
+
+.productSearchResult {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding: 9px 10px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: transparent;
+  color: #374151;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+}
+
+.productSearchResult:hover,
+.productSearchResult:focus-visible {
+  background: #fff2e7;
+  border-color: rgba(179, 84, 0, 0.12);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.productSearchResult span {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.productSearchResult strong {
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1f2937;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.productSearchResult :global(i) {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #363b42;
+  color: #ffffff;
+  font-size: 0.68rem;
+}
+
+.productSearchStatus {
+  padding: 12px 10px;
+  border-radius: 12px;
+  background: #f8fafc;
+  color: #64748b;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.navItemDropdown>.navLink,
+.productSearchNavItem>.navLink {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.navItemDropdown>.navLink :global(svg) {
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+@media (max-width: 1199px) {
+  .navItemDropdown:global(.is-open)>.navLink :global(svg) {
+    transform: rotate(180deg);
+  }
+}
+
+/* Desktop: off-canvas flyout. Do NOT set opacity/visibility here for all breakpoints — it overrides responsive.css on mobile and hides expanded submenus. */
+.navSubmenu {
+  background: var(--white);
+  min-width: 260px;
+  z-index: 1001;
+  padding: 8px 0;
+  margin-top: 4px;
+}
+
+@media (min-width: 1200px) {
+  .navSubmenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: all var(--transition-fast);
+  }
+
+  .navItemDropdown:hover>.navSubmenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .productSearchDropdown {
+    position: absolute;
+    top: calc(100% + 14px);
+    left: 50%;
+    z-index: 1002;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -8px);
+    transition: opacity 0.18s ease, visibility 0.18s ease, transform 0.18s ease;
+  }
+
+  .productSearchNavItem>.navLink:hover+.productSearchDropdown,
+  .productSearchNavItem>.navLink:focus+.productSearchDropdown,
+  .productSearchDropdown:hover,
+  .productSearchDropdown:focus-within {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+  }
+
+  .navItemDropdown:hover>.navLink :global(svg) {
+    transform: rotate(180deg);
+  }
+}
+
+@media (max-width: 1199px) {
+  .navSubmenu {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+}
+
+.navSubmenu :global(li) {
+  padding: 0;
+}
+
+.navSubmenu :global(a) {
+  display: block;
+  padding: 5px 14px;
+  font-size: 0.8rem;
+  color: var(--text-body);
+  transition: all var(--transition-fast);
+}
+
+@media (min-width: 1200px) {
+  .navSubmenu :global(a) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media (max-width: 1199px) {
+  .navSubmenu :global(a) {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+  }
+}
+
+.navSubmenu :global(a):hover {
+  background: var(--primary-light);
+  color: var(--primary);
+  padding-left: 24px;
+}
+
+/* --- Mobile drawer + accordion (from responsive.css, component-scoped) --- */
+@media (max-width: 1199px) {
+  :global(:root) {
+    --nav-height: 64px;
+  }
+
+  .topBarMenuOpen {
+    display: none;
+  }
+
+  .siteHeaderMenuOpen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10060;
+  }
+
+  .navbar :global(.container) {
+    gap: 12px;
+  }
+
+  .navActions {
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  .navMenu {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--white);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 24px var(--container-px);
+    gap: 4px;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform var(--transition);
+    z-index: 10050;
+    isolation: isolate;
+    box-shadow: var(--shadow-xl);
+  }
+
+  .navMenu:global(.open) {
+    transform: translateX(0);
+  }
+
+  .navMenu .navLink {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .navItemDropdown {
+    width: 100%;
+  }
+
+  .productSearchNavItem {
+    width: 100%;
+  }
+
+  .productSearchDropdown {
+    display: block;
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: none;
+    width: 100%;
+    margin: 2px 0 14px;
+    border-radius: 16px;
+    box-shadow: none;
+  }
+
+  .productSearchResults {
+    max-height: min(290px, 38vh);
+  }
+
+  .navItemDropdown>.navLink,
+  .productSearchNavItem>.navLink {
+    justify-content: space-between;
+  }
+
+  .navSubmenu {
+    position: static;
+    min-width: 0;
+    width: 100%;
+    margin-top: 0;
+    padding: 0 0 0 14px;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    display: none;
+    background: transparent;
+  }
+
+  .navItemDropdown:global(.is-open)>.navSubmenu {
+    display: block;
+  }
+
+  .navSubmenu :global(a) {
+    padding: 10px 16px;
+    font-size: 0.92rem;
+  }
+
+  .navGovtLogos {
+    gap: 8px;
+  }
+
+  .navGovtLogo {
+    height: 24px;
+    width: auto;
+  }
+}
+
+@media (max-width: 575px) {
+  .navbar :global(.container) {
+    gap: 10px;
+  }
+
+  .navLogoImage {
+    height: 40px;
+  }
+
+  .navActions {
+    gap: 6px;
+  }
+
+  .navGovtLogos {
+    gap: 6px;
+  }
+
+  .navGovtLogo {
+    height: 40px;
+  }
+}
+
+@media print {
+
+  .siteHeader,
+  .topBar,
+  .accessibilityBar {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .navbar :global(.container),
+  .topBar :global(.container) {
+    max-width: 1640px !important;
+    width: 95% !important;
+  }
+
+  .navbar :global(.container)>div {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 20px !important;
+    width: 100%;
+  }
+
+  .navbar :global(.container)>div>div:first-child {
+    flex: 0 0 auto !important;
+    width: auto !important;
+  }
+
+  .navbar :global(.container)>div>div:nth-child(2) {
+    flex: 1 1 auto !important;
+    width: auto !important;
+    min-width: 0;
+  }
+
+  .navbar :global(.container)>div>div:last-child {
+    flex: 0 0 auto !important;
+    width: auto !important;
+  }
+}

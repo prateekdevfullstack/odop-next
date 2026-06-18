@@ -1,0 +1,1497 @@
+/* =====================================================================
+   ODOP UP Portal - Responsive Stylesheet
+   Version: 1.0 | Prototype
+   ===================================================================== */
+
+/* -----------------------------------------------------------------------
+   LARGE DESKTOPS (1400px+)
+   ----------------------------------------------------------------------- */
+@media (min-width: 1400px) {
+    :root { --container-max:1404px; }
+    .hero h1 { font-size: 3.25rem; }
+    .districts-grid { grid-template-columns: repeat(4, 1fr); }
+    .products-grid  { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* -----------------------------------------------------------------------
+   STANDARD DESKTOP (1200px - 1399px) — Base styles apply
+   ----------------------------------------------------------------------- */
+@media (max-width: 1199px) {
+    .districts-grid  { grid-template-columns: repeat(3, 1fr); }
+    .category-grid   { grid-template-columns: repeat(6, 1fr); }
+    .products-grid   { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* -----------------------------------------------------------------------
+   TABLET LANDSCAPE (992px - 1199px)
+   ----------------------------------------------------------------------- */
+@media (max-width: 991px) {
+    /* Typography */
+    h1 { font-size: 2.25rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.35rem; }
+
+    .section    { padding-block: 30px; }
+    .section-lg { padding-block: 72px; }
+
+    /* Hero */
+    .hero { min-height: 500px; }
+    .hero h1 { font-size: 2.5rem; }
+    .hero-stats { flex-wrap: wrap; gap: 20px; }
+
+    /* Journey */
+    .journey-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+    /* Quick Strip — keep all six items on one row */
+    .quick-strip { margin-top: -28px; }
+    .quick-grid {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 0;
+    }
+
+    /* Districts */
+    .districts-grid { grid-template-columns: repeat(3, 1fr); }
+
+    /* Categories */
+    .category-grid { grid-template-columns: repeat(3, 1fr); }
+
+    /* Products */
+    .products-grid { grid-template-columns: repeat(2, 1fr); }
+
+    /* Schemes */
+    .schemes-grid { grid-template-columns: repeat(2, 1fr); }
+
+    /* Key Services */
+    .services-grid { grid-template-columns: repeat(2, 1fr) !important; }
+
+    .hero-v2 { 
+        aspect-ratio: 16 / 9 !important; 
+        overflow: hidden;
+    }
+
+    /* Coffee Book & Map */
+    .resource-showcase { grid-template-columns: 1fr; }
+    .resource-showcase-shell { padding: 28px; }
+    .resource-map-panel {
+        min-height: 0;
+        min-height: 520px;
+    }
+
+    /* News & Events */
+    .news-updates-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    .news-updates-sidebar-inner {
+        position: static;
+    }
+    .news-updates-copy {
+        max-width: none;
+    }
+    .news-updates-filters {
+        max-width: 420px;
+    }
+
+    /* Platforms */
+    .platform-grid { grid-template-columns: repeat(3, 1fr); }
+
+    /* Success Stories */
+    .success-stories-grid { grid-template-columns: repeat(2, 1fr); }
+
+    /* Grievance */
+    .grievance-wrap {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 32px;
+    }
+    .grievance-form {
+        box-shadow: none;
+        background: none;
+        border: none;
+    }
+
+    /* Stats */
+    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .stat-card:nth-child(2) { border-right: none; }
+    .stat-card:nth-child(1),
+    .stat-card:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,0.10); }
+    .district-mini-stats-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+    /* Listing */
+    .listing-layout { grid-template-columns: 260px 1fr; gap: 20px; }
+
+    /* Profile */
+    .profile-content { grid-template-columns: 1fr 300px; }
+    .profile-facts-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .products-gallery { grid-template-columns: repeat(2, 1fr); }
+
+    /* About */
+    .objectives-grid { grid-template-columns: repeat(2, 1fr); }
+    .benefits-grid   { grid-template-columns: 1fr; }
+    .district-business-shell { grid-template-columns: 1fr; }
+    .district-product-grid { grid-template-columns: 1fr 1fr; }
+    .district-product-gallery-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .district-product-gallery-strip {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+    }
+    .district-about-grid { grid-template-columns: 1fr; gap: 32px; }
+    /* Products tab: stack main column + suppliers rail for tablets and below */
+    .district-portal-products-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+    .district-portal-hero { min-height: 200px; }
+    .district-portal-product-primary { grid-template-columns: 1fr; }
+    .district-portal-product-primary-media { min-height: 300px; }
+    .district-portal-overview-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .district-portal-insights-grid,
+    .district-portal-knowledge-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .district-portal-secondary-grid,
+    .district-portal-supplier-grid,
+    .district-portal-schemes-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .district-portal-secondary-card { grid-template-columns: 1fr; }
+    .district-portal-secondary-card img { height: 210px; }
+    .district-portal-tertiary-grid,
+    .district-portal-flow-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .district-portal-search-form { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .district-portal-search-field-wide { grid-column: span 2; }
+    .district-portal-enquiry-banner { flex-direction: column; align-items: flex-start; }
+    .district-portal-enquiry-actions { justify-content: flex-start; }
+    .district-photo-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); max-height: 620px; }
+    .district-inline-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .district-inline-gallery-compact { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+    /* Contact */
+    .contact-grid { grid-template-columns: 1fr; gap: 28px; }
+    .contact-info-cards { flex-direction: row; flex-wrap: wrap; }
+    .contact-card { flex: 1; min-width: 240px; }
+    
+    /* Login Modal */
+    .login-modal-layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto minmax(0, 1fr);
+    }
+    .login-modal-promo { min-height: 0; padding: 28px 22px; }
+    .login-modal-box { max-width: 580px; }
+    .login-modal-promo h3 { font-size: 1.6rem; margin-bottom: 0; }
+    .login-modal-illustration { max-width: 180px; margin-top: 16px; }
+    .login-modal-panel { padding: 24px; }
+    .login-modal-back { margin-bottom: 24px; }
+    .login-modal-formwrap { max-width: none; }
+    .login-modal-brandbar { padding-right: 48px; }
+    .login-modal-brand-logo { width: 210px; }
+}
+
+/* -----------------------------------------------------------------------
+   TABLET PORTRAIT (768px - 991px)
+   ----------------------------------------------------------------------- */
+@media (max-width: 767px) {
+    /* Base */
+    :root {
+        --container-px: 18px;
+    }
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.6rem; }
+
+    .section    { padding-block: 30px; }
+    .section-sm { padding-block: 36px; }
+    .section-lg { padding-block: 56px; }
+    .section-header { margin-bottom: 36px; }
+    .section-header h2 { font-size: 1.6rem; }
+
+    /* Quick Strip — 2 columns × 3 rows on mobile */
+    .quick-strip { margin-top: -20px; margin-bottom: 6px; }
+    .quick-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0;
+        padding: 0;
+        border-radius: 0;
+    }
+    .quick-item {
+        min-height: 72px;
+        padding: 12px 6px;
+        gap: 8px;
+        border-bottom: 1px solid #ececec;
+        border-right: 1px solid #ececec;
+    }
+    .quick-item:nth-child(2n) {
+        border-right: none;
+    }
+    .quick-item:nth-last-child(-n+2) {
+        border-bottom: none;
+    }
+    .quick-item-primary {
+        min-height: 72px;
+        padding: 12px 6px;
+        border-right: 1px solid rgba(224, 131, 54, 0.22);
+    }
+    .quick-item-primary:nth-child(2n) {
+        border-right: none;
+    }
+    .quick-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 14px;
+        font-size: 1rem;
+    }
+    .quick-item-primary .quick-icon {
+        width: 44px;
+        height: 44px;
+    }
+    .quick-label { font-size: 0.9rem; }
+    .quick-meta { font-size: 0.82rem; }
+
+    /* Hero */
+    .hero { min-height: 170px; padding: 60px 0 48px; }
+    .hero.hero-no-image { min-height: 0; aspect-ratio: 16 / 9; padding: 0; }
+    .hero-bg-home {
+        background-size: contain;
+        background-position: left center;
+        background-color: #fff;
+    }
+    img.hero-bg-home {
+        object-fit: contain !important;
+        background-color: #fff;
+    }
+    .hero h1 { font-size: 2rem; }
+    .hero-subtitle { font-size: 0.95rem; }
+
+    .hero-search-field {
+        min-height: 56px;
+        padding: 0 8px 0 14px;
+    }
+    .hero-search-field input { font-size: 0.95rem; }
+    .hero-search-action {
+        width: 40px;
+        height: 40px;
+    }
+    .hero-prompt-tags {
+        gap: 10px;
+        margin-top: 16px;
+    }
+
+    /* Journey */
+    .journey-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .journey-card { padding: 24px 16px; }
+    .journey-icon { width: 56px; height: 56px; font-size: 1.4rem; }
+
+    /* Districts */
+    .districts-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+    /* Categories */
+    .category-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+
+    /* Products */
+    .products-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+
+    /* Schemes */
+    .schemes-grid { grid-template-columns: 1fr; }
+
+    /* Key Services */
+    .services-grid { grid-template-columns: 1fr; }
+    .service-card { padding: 24px; }
+
+    /* Coffee Book & Map */
+    .resource-showcase-shell { padding: 24px; }
+    .resource-column-heading,
+    .resource-map-heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .resource-card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .resource-column,
+    .resource-map-column { padding: 0; }
+    .resource-map-panel { padding: 20px; }
+    .resource-showcase-single {
+        grid-template-columns: 1fr;
+    }
+
+    /* News & Events */
+    .news-updates-filters {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        max-width: none;
+    }
+    .news-filter-btn {
+        text-align: center;
+    }
+    .news-update-card {
+        padding: 20px;
+    }
+
+    /* Platforms */
+    .platform-grid { grid-template-columns: repeat(2, 1fr); }
+
+    /* Leadership */
+    .leadership-showcase { grid-template-columns: 1fr; }
+    .leadership-row-top { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .leadership-row-ias { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .leadership-map-panel { min-height: 0; }
+    .leadership-map-title { font-size: 1.3rem; }
+    .leadership-map-hint { font-size: 0.82rem; }
+
+    /* Success Stories */
+    .success-stories-grid { grid-template-columns: 1fr; }
+    .story-card { padding: 24px; }
+
+    /* Grievance */
+    .grievance-wrap {
+        padding: 24px;
+        gap: 22px;
+    }
+    .grievance-form-header { padding: 22px 22px 16px; }
+    .grievance-form form { padding: 20px 22px 22px; }
+    .grievance-form-grid { grid-template-columns: 1fr; gap: 0; }
+    .grievance-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Stats */
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+
+    /* Mini stats */
+    .mini-stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .district-mini-stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    /* Page Hero */
+    .page-hero {
+        min-height: 250px;
+        max-height: 250px;
+        padding: 32px 0 0;
+    }
+    .page-hero .container { padding-bottom: 32px; }
+    .page-hero h1 { font-size: 1.75rem; }
+    .supplier-listing-hero { min-height: 360px; }
+    .supplier-hero-layout { grid-template-columns: 1fr; gap: 20px; }
+    .supplier-hero-content { align-items: center; }
+    .supplier-hero-panel { width: 100%; padding: 22px; border-radius: 22px; }
+    .supplier-hero-metrics { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .supplier-ai-search-shell { padding: 22px; border-radius: 22px; }
+    .supplier-directory-intro-shell { grid-template-columns: 1fr; }
+    .supplier-directory-intro-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .supplier-directory-intro-search { padding: 22px; }
+    .page-hero .shape {width: 400px;height: 400px;top: 90px;right: -9rem;}
+    .page-hero .breadcrumb-image {width: 45%;}
+    .page-hero-content {left: clamp(16px, 5vw, 80px);}
+
+    /* District Hero */
+    .district-hero { min-height: 300px; }
+    .district-hero-layout {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+    .district-admin-panel,
+    .district-product-panel,
+    .district-role-band,
+    .district-dossier-card,
+    .district-photo-archive { padding: 18px; }
+    .district-panel-head,
+    .district-role-head { flex-direction: column; align-items: flex-start; }
+    .district-panel-head p,
+    .district-role-head p { max-width: none; }
+    .district-admin-grid,
+    .district-product-grid { grid-template-columns: 1fr; }
+    .district-portal-hero { min-height: 180px; }
+    .district-portal-hero-content { padding: 26px 0 12px; }
+    .district-portal-hero-metrics,
+    .district-portal-overview-stats,
+    .district-portal-secondary-grid,
+    .district-portal-insights-grid,
+    .district-portal-knowledge-grid,
+    .district-portal-tertiary-grid,
+    .district-portal-supplier-grid,
+    .district-portal-flow-grid,
+    .district-portal-schemes-grid,
+    .district-portal-search-form { grid-template-columns: 1fr; }
+    .district-portal-tab-list,
+    .district-portal-knowledge-links { gap: 10px; justify-content: flex-start; }
+    .district-portal-tab { width: 100%; }
+    .district-portal-overview-band { flex-direction: column; align-items: flex-start; }
+    .district-portal-product-subhead { flex-direction: column; align-items: flex-start; }
+    .district-portal-product-primary-body,
+    .district-portal-search-panel,
+    .district-portal-enquiry-banner { padding: 24px; }
+    .district-portal-product-stats { grid-template-columns: 1fr; }
+    .district-portal-search-field-wide { grid-column: auto; }
+    .district-portal-card-actions-stack .btn { flex: 1 1 100%; }
+    .district-portal-flow-card::after { display: none; }
+    .district-portal-enquiry-actions .btn,
+    .district-portal-search-actions .btn,
+    .district-portal-hero-actions .btn { width: 100%; justify-content: center; }
+    .district-portal-products {
+        margin-top: -32px;
+    }
+    .district-product-copy h2 { font-size: 1.7rem; }
+    .district-product-gallery-row { grid-template-columns: 1fr; gap: 14px; }
+    .district-product-gallery-strip { gap: 10px; }
+    .district-product-visual-strip { flex-basis: 150px; }
+    .district-product-visual img { height: 210px; }
+    .district-role-capsules,
+    .district-register-actions { gap: 10px; }
+    .district-role-capsule { width: 100%; min-width: 0; justify-content: flex-start; }
+    .district-photo-archive-head { flex-direction: column; align-items: flex-start; }
+    .district-photo-archive-head p { max-width: none; }
+    .district-photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-height: none; overflow: visible; }
+    .district-detail-pair {
+        grid-template-columns: 1fr;
+    }
+    .district-detail-copy {
+        order: 1;
+    }
+    .district-inline-photo {
+        order: 2;
+        width: 72%;
+        max-width: 180px;
+        min-width: 0;
+        justify-self: start;
+    }
+    .district-inline-gallery,
+    .district-inline-gallery-compact { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    /* Listing */
+    .listing-layout { grid-template-columns: 1fr; }
+    .filter-sidebar {
+        position: static;
+        display: none;
+    }
+    .filter-sidebar.open { display: block; }
+
+    .mobile-filter-btn {
+        display: flex !important;
+    }
+
+    .listing-mobile-toolbar,
+    .listing-toolbar,
+    .listing-toolbar-left,
+    .listing-toolbar-controls {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .listing-toolbar-left,
+    .listing-toolbar-controls {
+        width: 100%;
+    }
+
+    .listing-toolbar-intro {
+        width: 100%;
+    }
+
+    .listing-toolbar-controls {
+        align-self: stretch;
+    }
+
+    .listing-sort-group {
+        width: 100%;
+        align-items: center;
+        gap: 10px;
+        min-width: 0;
+    }
+
+    .listing-sort-label {
+        flex-shrink: 0;
+    }
+
+    .listing-toolbar select {
+        width: auto;
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .supplier-directory-intro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .supplier-card {
+        flex-direction: column;
+    }
+
+    .supplier-card-aside {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .supplier-card-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .supplier-card-actions {
+        width: 100%;
+    }
+
+    /* Profile */
+    .profile-banner {
+        min-height: 300px;
+        padding: 32px 0 0;
+    }
+    .profile-banner .container { padding-bottom: 32px; }
+    .profile-capsules-top {
+        justify-content: flex-start;
+        margin-bottom: 14px;
+    }
+    .profile-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+    .profile-nav-tabs { margin-bottom: 22px; }
+    .profile-content { grid-template-columns: 1fr; }
+    .profile-sidebar { order: -1; }
+    .profile-cta-stack { width: 100%; }
+    .profile-cta-stack .btn { width: 100%; justify-content: center; }
+    .profile-facts-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .supplier-rating-summary { grid-template-columns: 1fr; }
+    .supplier-media-grid,
+    .supplier-testimonials,
+    .supplier-review-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .profile-pill-group { gap: 10px; }
+    .products-gallery { grid-template-columns: repeat(2, 1fr); }
+    .glance-row { padding: 12px 16px; }
+
+    /* Objectives */
+    .objectives-grid { grid-template-columns: 1fr; }
+    .benefits-grid   { grid-template-columns: 1fr; }
+
+    /* Contact */
+    .contact-info-cards { flex-direction: column; }
+    .contact-card { min-width: unset; }
+    .registration-main-grid { grid-template-columns: 1fr; }
+    .registration-sidebar { order: -1; }
+    .registration-type-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .registration-checkbox-grid { grid-template-columns: 1fr; }
+    .district-entry-grid { grid-template-columns: 1fr; }
+    .district-entry-grid-stats { grid-template-columns: 1fr; }
+
+    .login-modal-shell { padding: 22px; }
+    .login-modal-box { max-width: 100%; }
+    .login-modal-promo { padding: 24px 18px; }
+    .login-modal-brandbar { padding-right: 44px; margin-bottom: 12px; }
+    .login-modal-brand-logo { width: 190px; }
+    .login-register-screen { padding: 18px; }
+    .pre-registration-grid-roles { grid-template-columns: 1fr; }
+    .pre-registration-grid-sectors { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .pre-registration-card { min-height: 0; padding: 24px 26px; }
+    .pre-registration-grid-sectors .pre-registration-card {
+        padding: 18px 18px 16px;
+    }
+    .pre-registration-grid-sectors .pre-registration-card-copy strong {
+        font-size: 1rem;
+    }
+    .pre-registration-grid-sectors .pre-registration-card-copy span {
+        font-size: 0.78rem;
+    }
+
+    /* Form */
+    .form-row { grid-template-columns: 1fr; }
+    .registration-section { padding: 24px 5px; }
+
+    /* Supplier Card */
+    .supplier-card { flex-direction: column; gap: 14px; }
+    .supplier-card-logo { width: 150px; min-width: 150px; height: 150px; }
+    .supplier-card-actions { flex-wrap: wrap; }
+    .supplier-card-actions .btn { flex: 1; min-width: 120px; }
+
+    /* Profile Tabs */
+    .profile-tabs {
+        grid-template-columns: 1fr;
+        overflow: visible;
+        gap: 10px;
+        padding: 0;
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .profile-tab {
+        white-space: normal;
+        padding: 14px 16px;
+        border: 1px solid var(--border-light);
+        border-right: 1px solid var(--border-light);
+        border-bottom: 1px solid var(--border-light);
+        border-radius: 18px;
+        background: var(--white);
+        box-shadow: var(--shadow-sm);
+    }
+    .profile-tab:last-child {
+        border-bottom: 1px solid var(--border-light);
+    }
+    .profile-tab.active {
+        border-color: rgba(249, 115, 22, 0.34);
+        background: linear-gradient(180deg, #fff8f2 0%, #fff2e8 100%);
+        box-shadow: 0 10px 22px rgba(249, 115, 22, 0.12);
+    }
+    .profile-tab i {
+        width: 38px;
+        height: 38px;
+        border-radius: 11px;
+    }
+    .profile-tab-copy {
+        gap: 3px;
+    }
+    .profile-tab-copy strong {
+        font-size: 0.92rem;
+    }
+    .profile-tab-copy small {
+        font-size: 0.8rem;
+    }
+
+    .registration-type-grid { grid-template-columns: 1fr; }
+
+    /* About Hero */
+    .about-hero { padding: 48px 0; }
+    .about-hero h1 { font-size: 2rem; }
+}
+
+/* -----------------------------------------------------------------------
+   MOBILE (max 480px)
+   ----------------------------------------------------------------------- */
+@media (max-width: 480px) {
+    :root {
+        --container-px: 16px;
+    }
+
+    .leadership-row-top,
+    .leadership-row-ias {
+        grid-template-columns: 1fr;
+    }
+
+    .login-modal-shell { padding: 16px; }
+    .login-modal-box { border-radius: 20px; }
+    .login-modal-close {
+        top: 12px;
+        right: 12px;
+        width: 42px;
+        height: 42px;
+    }
+    .login-modal-brandbar {
+        justify-content: flex-start;
+        padding-right: 52px;
+        margin-bottom: 12px;
+    }
+    .login-modal-brand-logo { width: 170px; }
+    .login-modal-promo,
+    .login-modal-panel {
+        border-radius: 20px;
+    }
+    .login-register-screen { padding: 12px; }
+    .login-modal-promo {
+        padding: 24px 18px 18px;
+    }
+    .login-modal-promo h3 {
+        font-size: 1.7rem;
+    }
+    .login-modal-panel {
+        padding: 18px;
+    }
+    .login-modal-formwrap h2 {
+        font-size: 1.55rem;
+    }
+    .login-register-stage-head h2 {
+        font-size: 1.8rem;
+    }
+    .login-register-stage-head p {
+        font-size: 1rem;
+    }
+    .pre-registration-grid-sectors {
+        grid-template-columns: 1fr;
+    }
+    .pre-registration-card {
+        gap: 16px;
+        padding: 22px 18px;
+        border-radius: 20px;
+    }
+    .pre-registration-card-copy strong {
+        font-size: 1.35rem;
+    }
+
+    .district-product-gallery-strip {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .district-portal-products-grid {
+        gap: 20px;
+    }
+
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.4rem; }
+
+    /* Hero */
+    .hero { padding: 48px 0 36px; }
+    .hero.hero-no-image { padding: 0; aspect-ratio: 16 / 9; }
+    .hero-bg-home {
+        background-size: contain;
+        background-position: left center;
+        background-color: #fff;
+    }
+    img.hero-bg-home {
+        object-fit: contain !important;
+        background-color: #fff;
+    }
+    .hero h1 { font-size: 1.75rem; }
+    .hero-eyebrow { font-size: 0.7rem; }
+    .hero-search-field {
+        min-height: 52px;
+        gap: 12px;
+        padding: 0 8px 0 14px;
+    }
+    .hero-search-action {
+        width: 38px;
+        height: 38px;
+    }
+    .hero-prompt-tags {
+        justify-content: flex-start;
+        gap: 8px;
+    }
+    .hero-prompt-chip {
+        width: auto;
+        max-width: calc(50% - 4px);
+        min-width: 0;
+        justify-content: center;
+        text-align: center;
+        white-space: normal;
+        flex: 0 1 calc(50% - 4px);
+    }
+
+    /* Journey — single column */
+    .journey-grid { grid-template-columns: 1fr; }
+
+    /* Districts — single column */
+    .districts-grid { grid-template-columns: 1fr; }
+
+    /* Products — single column */
+    .products-grid { grid-template-columns: 1fr; }
+
+    /* Category — single column */
+    .category-grid { grid-template-columns: repeat(2, 1fr);}
+
+    /* Success Stories */
+    .story-card { padding: 22px; }
+    .story-author { align-items: flex-start; }
+
+    /* Grievance */
+    .grievance-wrap { padding: 20px; }
+    .grievance-section-header { margin-bottom: 32px; }
+    .grievance-step { padding: 12px 14px; }
+    .grievance-form-header { padding: 20px 18px 14px; }
+    .grievance-form form { padding: 18px; }
+
+    /* Coffee Book & Map */
+    .resource-showcase-shell { padding: 18px; }
+    .resource-card-grid { grid-template-columns: 1fr; }
+    .resource-column,
+    .resource-map-column { padding: 0; }
+    .resource-map-panel { padding: 18px; }
+    .resource-map-heading .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* News & Events */
+    .news-updates-title {
+        font-size: 1.8rem;
+    }
+    .news-updates-filters {
+        grid-template-columns: 1fr;
+    }
+    .news-update-card {
+        padding: 18px;
+        gap: 14px;
+    }
+    .news-update-text {
+        font-size: 0.94rem;
+    }
+    .news-update-arrow {
+        opacity: 1;
+        transform: none;
+    }
+
+    /* Platforms */
+    .platform-grid { grid-template-columns: 1fr; }
+    .platform-card { padding: 22px 20px; }
+
+    /* Services */
+    .service-links .btn,
+    .platform-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Quick Strip — 2 columns (inherits grid from max-width: 767px rules) */
+    .quick-strip { margin-top: 0; }
+    .quick-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0;
+        padding: 0;
+    }
+    .quick-item {
+        min-height: 68px;
+        padding: 10px 4px;
+    }
+    .quick-item-primary {
+        min-height: 68px;
+        padding: 10px 4px;
+    }
+
+    /* Buttons */
+    .btn-xl { padding: 14px 28px; font-size: 0.95rem; }
+
+    /* Profile */
+    .profile-facts-grid { grid-template-columns: 1fr; }
+    .supplier-media-grid,
+    .supplier-testimonials,
+    .supplier-review-grid { grid-template-columns: 1fr; }
+    .products-gallery { grid-template-columns: 1fr; }
+    .glance-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+    .glance-value { text-align: left; }
+    .related-link {
+        align-items: flex-start;
+    }
+    .supplier-card-highlights {
+        gap: 10px;
+        font-size: 0.82rem;
+    }
+
+    /* Page Hero */
+    .page-hero {min-height: 300px;max-height: 300px;}
+}
+
+/* -----------------------------------------------------------------------
+   PRINT STYLES
+   ----------------------------------------------------------------------- */
+@media print {
+    .hero-search,
+    .filter-sidebar,
+    #back-to-top { display: none !important; }
+
+    body { font-size: 12pt; color: #000; }
+    a { color: #000; text-decoration: underline; }
+    .section { padding-block: 20pt; }
+    .card-base, .info-card, .scheme-card,
+    .district-card, .product-card, .supplier-card {
+        border: 1pt solid #ccc !important;
+        box-shadow: none !important;
+    }
+
+    .page-hero {
+        min-height: 280px;
+        padding: 24px 0 0;
+    }
+
+    .page-hero .container {
+        padding-bottom: 24px;
+    }
+
+    .profile-banner {
+        min-height: 280px;
+        padding: 24px 0 0;
+    }
+
+    .profile-banner .container {
+        padding-bottom: 24px;
+    }
+
+    .profile-capsules-top {
+        justify-content: flex-start;
+        gap: 8px;
+        margin-bottom: 12px;
+    }
+
+    .supplier-listing-hero {
+        min-height: 280px;
+    }
+
+    .supplier-listing-hero h1 {
+        font-size: 2.05rem;
+    }
+
+    .supplier-listing-hero p {
+        font-size: 0.95rem;
+    }
+
+    .supplier-hero-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .supplier-hero-metrics {
+        grid-template-columns: 1fr;
+    }
+
+    .supplier-hero-metric {
+        padding: 16px;
+    }
+
+    .supplier-hero-panel {
+        padding: 18px;
+    }
+
+    .supplier-ai-search-shell {
+        padding: 18px;
+    }
+
+    .supplier-hero-panel-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .supplier-hero-insight {
+        grid-template-columns: 1fr;
+    }
+
+    .supplier-directory-intro-shell {
+        padding: 22px;
+        border-radius: 24px;
+    }
+
+    .supplier-directory-intro-search {
+        padding: 18px;
+        border-radius: 20px;
+    }
+
+    .supplier-card {
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .supplier-card-aside {
+        gap: 10px;
+    }
+
+    .supplier-card-logo {
+        width: 150px;
+        min-width: 150px;
+        height: 150px;
+    }
+
+    .supplier-card-topline {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .supplier-card-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* -----------------------------------------------------------------------
+   DISTRICT DETAIL — PRODUCTS TAB (responsive refinements)
+   Targets the products list + suppliers sidebar two-column layout inside
+   `.district-portal-tab-panel` when `activeTab === "products"`.
+   ----------------------------------------------------------------------- */
+
+/* Tablet landscape (≤ 991px): stacked layout; tighten product cards + supplier rail */
+@media (max-width: 991px) {
+    .district-portal-products-copy .district-product-panel {
+        padding: 20px;
+        border-radius: 20px;
+    }
+    .district-product-media-row {
+        gap: 18px;
+    }
+    .district-product-media-title h2 {
+        font-size: 1.65rem;
+    }
+    .district-portal-supplier-rail-inner {
+        gap: 16px;
+    }
+    .district-portal-supplier-head h3 {
+        font-size: 1.35rem;
+    }
+    .district-portal-top-suppliers {
+        gap: 32px;
+    }
+    .district-portal-products-side .top-five-group-head h3 {
+        font-size: 1.4rem;
+    }
+    .district-portal-products-side .top-five-media-top {
+        height: 75px;
+    }
+}
+
+/* Tablet portrait (≤ 767px): product rows + supplier cards reflow */
+@media (max-width: 767px) {
+    .district-profile-inline-search {
+        margin-bottom: 20px;
+    }
+    .district-profile-inline-search .hero-search-field {
+        min-height: 52px;
+        padding: 0 8px 0 14px;
+        border-radius: 18px;
+    }
+    .district-profile-inline-search .hero-search-field input {
+        font-size: 0.92rem;
+    }
+
+    .district-portal-products-copy .district-product-panel {
+        padding: 18px;
+        border-radius: 18px;
+    }
+    .district-portal-products-copy .district-product-divider {
+        padding-bottom: 18px;
+    }
+    .district-product-showcase {
+        gap: 16px;
+    }
+    .district-product-media-title h2 {
+        font-size: 1.5rem;
+    }
+
+    .district-portal-products-copy .district-product-media-row {
+        gap: 16px;
+    }
+
+    .district-portal-products-copy .district-product-media-thumb {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Suppliers — full-width rail under products: allow multi-column cards */
+    .district-portal-products-side .top-five-card-grid,
+    .district-portal-products-side .top-five-compact-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 14px;
+    }
+    .district-portal-products-side .top-five-media-top {
+        height: 160px;
+    }
+    .district-portal-supplier-group-cta {
+        display: flex;
+        justify-content: center;
+    }
+    .district-portal-supplier-group-cta .top-five-view-all {
+        width: 100%;
+        justify-content: center;
+    }
+    .top-five-group-head {
+        gap: 8px;
+    }
+}
+
+/* Mobile (≤ 480px): single-column supplier cards, condensed paddings */
+@media (max-width: 480px) {
+    .district-profile-inline-search .hero-search-field {
+        min-height: 48px;
+        border-radius: 16px;
+    }
+    .district-profile-inline-search .hero-search-action {
+        width: 38px;
+        height: 38px;
+    }
+
+    .district-portal-products-copy .district-product-panel {
+        padding: 16px;
+        border-radius: 16px;
+    }
+    .district-product-media-title h2 {
+        font-size: 1.35rem;
+    }
+    .district-product-description-block p,
+    .district-product-description-block li {
+        font-size: 0.92rem;
+        line-height: 1.7;
+    }
+    .district-product-description-toggle {
+        font-size: 0.88rem;
+    }
+
+    /* Force one supplier card per row on phones */
+    .district-portal-products-side .top-five-card-grid,
+    .district-portal-products-side .top-five-compact-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+    .district-portal-products-side .top-five-media-top {
+        height: 180px;
+    }
+    .district-portal-products-side .top-five-media-body {
+        padding: 22px 14px 14px;
+    }
+    .top-five-media-body h4,
+    .top-five-compact-head h4 {
+        font-size: 1rem;
+    }
+    .top-five-media-body p,
+    .top-five-compact-body p {
+        font-size: 0.85rem;
+    }
+    .top-five-primary-btn,
+    .top-five-apply-btn {
+        width: 100%;
+        min-height: 42px;
+    }
+    .top-five-compact-card {
+        padding: 14px;
+        border-radius: 14px;
+    }
+    .top-five-compact-logo {
+        width: 40px;
+        height: 40px;
+        font-size: 0.62rem;
+    }
+    .district-portal-supplier-head h3 {
+        font-size: 1.2rem;
+    }
+    .district-portal-products-side .top-five-group-head h3 {
+        font-size: 1.25rem;
+    }
+}
+
+/* -----------------------------------------------------------------------
+   GALLERY PAGE — EventCards & month-tabs responsive
+   ----------------------------------------------------------------------- */
+
+/* Tablet landscape (≤ 991px) */
+@media (max-width: 991px) {
+    .gallery-page .gallery-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .gallery-page .resource-heading-box,
+    .gallery-page .gallery-page-heading {
+        margin-top: 24px !important;
+    }
+
+    .gallery-page .tab-content {
+        margin-top: 36px;
+    }
+
+    .gallery-page .resource-heading-gallery {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .events-wrapper {
+        width: 100%;
+        min-height: 0;
+        height: auto;
+        padding: 30px 0;
+        overflow: visible;
+    }
+
+    .cards-container {
+        gap: 20px;
+        overflow: visible;
+    }
+
+    .event-card {
+        width: calc(50% - 10px);
+        max-width: 330px;
+        min-height: 220px;
+        height: auto;
+        padding: 24px;
+    }
+
+    .gallery-page .event-card-link {
+        flex: 0 1 calc(50% - 10px);
+        max-width: 330px;
+        width: calc(50% - 10px);
+    }
+
+    .month-tabs,
+    .month-sub-tabs {
+        gap: 12px;
+        margin-top: 32px;
+    }
+
+    .month-btn {
+        padding: 12px 22px;
+        font-size: 16px;
+    }
+
+    .gallery-page #modal .modal-content-wrapper {
+        width: calc(100vw - 32px);
+        max-width: calc(100vw - 32px);
+    }
+
+    .gallery-page #prevBtn,
+    .gallery-page #nextBtn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .gallery-page #closeBtn {
+        top: -36px;
+        right: 4px;
+        font-size: 1.5rem;
+    }
+}
+
+/* Tablet portrait (≤ 767px) — horizontal scroll for category cards only */
+@media (max-width: 767px) {
+    .gallery-page .gallery-container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .gallery-page .resource-heading-box,
+    .gallery-page .gallery-page-heading {
+        margin-top: 20px !important;
+    }
+
+    .gallery-page .event-card-link {
+        flex: 0 0 280px;
+        max-width: 280px;
+        width: 280px;
+    }
+
+    .gallery-page .tab-content {
+        margin-top: 28px;
+    }
+
+    .events-wrapper {
+        width: 100%;
+        min-height: 0;
+        height: auto;
+        padding: 24px 0;
+        overflow: visible;
+    }
+
+    .cards-container {
+        flex-wrap: nowrap;
+        gap: 16px;
+        justify-content: flex-start;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        padding: 0 4px 8px;
+        margin: 0 -4px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .cards-container::-webkit-scrollbar {
+        height: 4px;
+    }
+
+    .cards-container::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 4px;
+    }
+
+    .event-card {
+        flex: 0 0 280px;
+        width: 280px;
+        max-width: 280px;
+        min-height: 200px;
+        height: auto;
+        padding: 20px;
+    }
+
+    .event-card h3 {
+        font-size: 16px;
+        margin-top: 28px;
+    }
+
+    .event-date {
+        font-size: 13px;
+        margin-top: 24px;
+    }
+
+    .watermark img {
+        max-width: 110px;
+        max-height: 90px;
+    }
+
+    .month-tabs,
+    .month-sub-tabs {
+        gap: 10px;
+        margin-top: 24px;
+        justify-content: flex-start;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        flex-wrap: nowrap;
+        padding-bottom: 4px;
+        scrollbar-width: thin;
+    }
+
+    .month-tabs::-webkit-scrollbar,
+    .month-sub-tabs::-webkit-scrollbar {
+        height: 4px;
+    }
+
+    .month-tabs::-webkit-scrollbar-thumb,
+    .month-sub-tabs::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 4px;
+    }
+
+    .month-btn {
+        flex: 0 0 auto;
+        padding: 10px 18px;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+}
+
+/* Mobile (≤ 480px) */
+@media (max-width: 480px) {
+    .gallery-page .gallery-container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .gallery-page .resource-heading-box,
+    .gallery-page .gallery-page-heading {
+        margin-top: 16px !important;
+    }
+
+    .gallery-page .event-card-link {
+        flex: 0 0 250px;
+        max-width: 250px;
+        width: 250px;
+    }
+
+    .gallery-page .tab-content {
+        margin-top: 20px;
+    }
+
+    .gallery-page .resource-heading-gallery {
+        font-size: 18px;
+    }
+
+    .events-wrapper {
+        padding: 18px 0;
+        overflow: visible;
+    }
+
+    .cards-container {
+        gap: 14px;
+    }
+
+    .event-card {
+        flex: 0 0 250px;
+        width: 250px;
+        max-width: 250px;
+        min-height: 180px;
+        height: auto;
+        padding: 16px;
+        border-radius: 18px;
+    }
+
+    .event-card h3 {
+        font-size: 15px;
+        margin-top: 20px;
+    }
+
+    .event-date {
+        font-size: 12px;
+        margin-top: 18px;
+    }
+
+    .logo-circle {
+        width: 46px;
+        height: 46px;
+    }
+
+    .logo-circle img {
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    .watermark {
+        display: none;
+    }
+
+    .month-tabs,
+    .month-sub-tabs {
+        gap: 8px;
+        margin-top: 20px;
+    }
+
+    .month-btn {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+
+    .gallery-page #prevBtn {
+        left: 8px;
+    }
+
+    .gallery-page #nextBtn {
+        right: 8px;
+    }
+
+    .gallery-page #prevBtn,
+    .gallery-page #nextBtn {
+        width: 36px;
+        height: 36px;
+        font-size: 0.95rem;
+    }
+
+    .gallery-page #closeBtn {
+        top: 8px;
+        right: 8px;
+        z-index: 2;
+    }
+
+    .gallery-page .modal-media {
+        max-height: 72vh;
+        border-radius: 12px;
+    }
+}
+
+.month-sub-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+/* -----------------------------------------------------------------------
+   MOBILE FILTER BUTTON (hidden by default, shown in mobile view)
+   ----------------------------------------------------------------------- */
+.mobile-filter-btn {
+    display: none;
+    align-items: center;
+    gap: 8px;
+}
+
+/* -----------------------------------------------------------------------
+   ACCESSIBILITY & FOCUS
+   ----------------------------------------------------------------------- */
+:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    border-radius: var(--radius-xs);
+}
+
+a:focus-visible,
+button:focus-visible { outline-offset: 3px; }
+
+/* High contrast support */
+@media (prefers-contrast: high) {
+    :root {
+        --border: #666;
+        --text-muted: #444;
+        --text-light: #555;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    html { scroll-behavior: auto; }
+}
+
+
+@media (min-width: 1400px) {
+  .events-wrapper {
+    max-width: 1404px;
+  }
+}

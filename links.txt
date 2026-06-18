@@ -1,0 +1,87 @@
+ODOP Portal — index.html navigation and footer (.html targets only)
+Source: index.html (navbar + footer as of this export)
+================================================================================
+
+NAVBAR
+--------------------------------------------------------------------------------
+
+About
+ about-odop.html
+ chief-minister-message.html
+ minister-message.html
+ objective-mission-vision.html
+ achievements.html
+ brand-odop.html
+ allotted-budget.html
+ export-promotion-policy.html
+ odop-cell.html
+ ministers-and-govt-officers-list.html
+ directorate-officers-list.html
+ right-to-information.html
+ minutes-of-meeting.html
+ frequently-asked-questions.html
+
+Schemes
+ odop-schemes.html (IMPORTANT)
+
+Explore District
+ district-products.html (IMPORTANT)
+ supplier-listing.html?type=manufacturer
+ supplier-listing.html?type=wholesaler
+ supplier-listing.html?type=distributor
+ supplier-listing.html?type=shopkeeper
+ supplier-listing.html?type=artisan
+ supplier-listing.html?type=exporter
+
+Marketplace
+ (no.html links in this submenu — items are external app / partner URLs)
+
+Events & Media
+ gallery.html
+ upcoming-events.html
+ past-events.html
+ event-reports.html
+ covid-19.html
+
+Knowledge Base
+ project-report.html (IMPORTANT)
+ documentary.html
+ success-story.html
+ project-video.html
+
+Resources & Contact
+ tenders.html
+ cfc-list.html
+ newsletters.html
+ list-of-approvals.html
+ contact-us.html
+
+================================================================================
+
+FOOTER
+--------------------------------------------------------------------------------
+
+Quick Links
+ project-report.html
+ documentary.html
+ success-story.html
+ project-video.html
+ district-products.html
+ supplier-listing.html
+ odop-schemes.html
+ about-odop.html
+ contact-us.html
+
+Supplier Types
+ supplier-listing.html?type=manufacturer
+ supplier-listing.html?type=wholesaler
+ supplier-listing.html?type=distributor
+ supplier-listing.html?type=shopkeeper
+ supplier-listing.html?type=artisan
+ supplier-listing.html?type=exporter
+
+Contact Details
+ (no.html links in this column — address / phone / email / hours only)
+
+Footer bottom (Privacy / Terms / etc.)
+ (no.html links — anchors use “#” placeholders)

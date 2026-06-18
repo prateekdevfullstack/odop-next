@@ -1,0 +1,687 @@
+.cfc-portal-shell {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 24px;
+  min-height: calc(100vh - 220px);
+}
+
+.cfc-portal-sidebar {
+  border: 1px solid rgba(27, 60, 114, 0.1);
+  border-radius: 18px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  height: fit-content;
+  position: sticky;
+  top: 24px;
+}
+
+.cfc-portal-sidebar__brand {
+  display: grid;
+  gap: 6px;
+  padding: 4px 8px 16px;
+  border-bottom: 1px solid rgba(27, 60, 114, 0.08);
+}
+
+.cfc-portal-sidebar__brand strong {
+  color: #1f2a3a;
+  font-size: 1.05rem;
+}
+
+.cfc-portal-sidebar__brand span {
+  color: #4b5565;
+  font-size: 0.92rem;
+}
+
+.cfc-portal-sidebar__brand small {
+  color: #7b8798;
+  font-size: 0.85rem;
+}
+
+.cfc-portal-sidebar__nav {
+  display: grid;
+  gap: 8px;
+}
+
+.cfc-portal-sidebar__nav a {
+  display: block;
+  padding: 12px 14px;
+  border-radius: 12px;
+  color: #4b5565;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.cfc-portal-sidebar__nav a:hover,
+.cfc-portal-sidebar__nav a.is-active {
+  background: rgba(138, 35, 28, 0.08);
+  color: #8a231c;
+}
+
+.cfc-portal-sidebar__logout {
+  margin-top: auto;
+  border: 1px solid rgba(27, 60, 114, 0.12);
+  border-radius: 12px;
+  background: #fff;
+  color: #4b5565;
+  padding: 10px 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cfc-portal-main {
+  min-width: 0;
+  padding: 4px 0 8px;
+}
+
+.cfc-portal-page {
+  display: grid;
+  gap: 24px;
+}
+
+.cfc-portal-page-head {
+  margin-bottom: 0;
+}
+
+.cfc-portal-page-head h1 {
+  margin: 0 0 6px;
+  color: #1f2a3a;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+.cfc-portal-page-head p {
+  margin: 0;
+  color: #7b8798;
+  line-height: 1.6;
+  max-width: 62ch;
+}
+
+.cfc-portal-dashboard .cfc-portal-stats {
+  margin-bottom: 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 900px;
+}
+
+.cfc-portal-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.cfc-portal-stat-card {
+  display: grid;
+  gap: 8px;
+  align-content: start;
+  border: 1px solid rgba(27, 60, 114, 0.1);
+  border-radius: 16px;
+  background: #fff;
+  padding: 20px 22px;
+  min-height: 96px;
+}
+
+.cfc-portal-stat-card strong {
+  display: block;
+  font-size: clamp(1.35rem, 2vw, 1.75rem);
+  line-height: 1.2;
+  color: #8a231c;
+}
+
+.cfc-portal-stat-card span {
+  color: #7b8798;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.cfc-portal-panel__title {
+  margin: 0 0 16px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1f2a3a;
+}
+
+.cfc-portal-panel--actions {
+  max-width: 900px;
+}
+
+.cfc-portal-quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.cfc-portal-panel {
+  border: 1px solid rgba(27, 60, 114, 0.1);
+  border-radius: 18px;
+  background: #fff;
+  padding: 20px 24px;
+}
+
+.cfc-portal-panel--profile {
+  padding: 28px 32px;
+}
+
+.cfc-portal-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.cfc-portal-table-wrap {
+  overflow-x: auto;
+}
+
+.cfc-portal-panel--table {
+  padding: 0;
+  overflow: hidden;
+}
+
+.cfc-portal-panel--table .cfc-portal-table thead th:first-child,
+.cfc-portal-panel--table .cfc-portal-table tbody td:first-child {
+  padding-left: 24px;
+}
+
+.cfc-portal-panel--table .cfc-portal-table thead th:last-child,
+.cfc-portal-panel--table .cfc-portal-table tbody td:last-child {
+  padding-right: 24px;
+}
+
+.cfc-portal-panel--table .cfc-portal-empty,
+.cfc-portal-panel--table .cfc-portal-loading {
+  padding: 40px 24px;
+}
+
+.cfc-portal-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cfc-portal-table th,
+.cfc-portal-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(27, 60, 114, 0.08);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.cfc-portal-table thead th {
+  background: #f8fafc;
+  color: #4b5565;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-bottom: 1px solid rgba(27, 60, 114, 0.12);
+  white-space: nowrap;
+}
+
+.cfc-portal-table tbody tr:hover {
+  background: rgba(138, 35, 28, 0.02);
+}
+
+.cfc-portal-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.cfc-portal-table__col-primary {
+  width: 100%;
+  min-width: 220px;
+}
+
+.cfc-portal-table__col-date {
+  width: 180px;
+  white-space: nowrap;
+}
+
+.cfc-portal-table__col-actions {
+  width: 1%;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.cfc-portal-table__col-actions .cfc-portal-table-actions {
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+}
+
+.cfc-portal-table__name {
+  display: block;
+  font-weight: 600;
+  color: #1f2a3a;
+  line-height: 1.45;
+}
+
+.cfc-portal-date-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(138, 35, 28, 0.07);
+  color: #8a231c;
+  font-size: 0.86rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.cfc-portal-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px 16px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(27, 60, 114, 0.08);
+}
+
+.cfc-portal-pagination__label {
+  color: #7b8798;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.cfc-portal-table-actions {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.cfc-portal-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-width: 34px;
+  min-height: 34px;
+  padding: 7px 10px;
+  border: 1px solid rgba(27, 60, 114, 0.14);
+  border-radius: 10px;
+  background: #fff;
+  color: #4b5565;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.cfc-portal-icon-btn:hover:not(:disabled) {
+  background: rgba(138, 35, 28, 0.06);
+  border-color: rgba(138, 35, 28, 0.28);
+  color: #8a231c;
+}
+
+.cfc-portal-icon-btn--danger {
+  color: #b42318;
+  border-color: rgba(180, 35, 24, 0.2);
+}
+
+.cfc-portal-icon-btn--danger:hover:not(:disabled) {
+  background: rgba(180, 35, 24, 0.06);
+  border-color: rgba(180, 35, 24, 0.35);
+  color: #912018;
+}
+
+.cfc-portal-icon-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.cfc-portal-empty,
+.cfc-portal-loading {
+  padding: 28px 16px;
+  text-align: center;
+  color: #7b8798;
+}
+
+.cfc-portal-form {
+  display: grid;
+  gap: 14px;
+  max-width: 640px;
+}
+
+.cfc-portal-field {
+  display: grid;
+  gap: 6px;
+}
+
+.cfc-portal-field label {
+  font-weight: 600;
+  color: #1f2a3a;
+}
+
+.cfc-portal-field input,
+.cfc-portal-field select,
+.cfc-portal-field textarea {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid rgba(27, 60, 114, 0.14);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font: inherit;
+}
+
+.cfc-portal-field-hint {
+  margin: 0;
+  color: #7b8798;
+  font-size: 0.85rem;
+}
+
+.cfc-portal-field-error {
+  margin: 0;
+  color: #b42318;
+  font-size: 0.88rem;
+}
+
+.cfc-portal-form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.cfc-portal-image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.cfc-portal-image-card {
+  position: relative;
+  border: 1px solid rgba(27, 60, 114, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f8fafc;
+}
+
+.cfc-portal-image-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.cfc-portal-image-remove {
+  width: 100%;
+  border: 0;
+  background: rgba(15, 23, 42, 0.78);
+  color: #fff;
+  padding: 8px;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.cfc-public-filters {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.cfc-public-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.cfc-public-card {
+  border: 1px solid rgba(27, 60, 114, 0.1);
+  border-radius: 16px;
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.cfc-public-card__body {
+  padding: 14px;
+  display: grid;
+  gap: 8px;
+}
+
+.cfc-public-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.cfc-public-tabs button {
+  border: 1px solid rgba(27, 60, 114, 0.12);
+  border-radius: 999px;
+  background: #fff;
+  padding: 8px 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cfc-public-tabs button.is-active {
+  background: #8a231c;
+  border-color: #8a231c;
+  color: #fff;
+}
+
+.cfc-portal-profile-list {
+  display: grid;
+  gap: 0;
+  margin: 0;
+}
+
+.cfc-portal-profile-list > div {
+  display: grid;
+  grid-template-columns: minmax(120px, 160px) 1fr;
+  gap: 16px 24px;
+  align-items: start;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(27, 60, 114, 0.08);
+}
+
+.cfc-portal-profile-list > div:first-child {
+  padding-top: 0;
+}
+
+.cfc-portal-profile-list > div:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.cfc-portal-profile-list dt {
+  font-weight: 600;
+  color: #4b5565;
+  font-size: 0.92rem;
+}
+
+.cfc-portal-profile-list dd {
+  margin: 0;
+  color: #1f2a3a;
+  line-height: 1.5;
+}
+
+.cfc-portal-search-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cfc-portal-search-form input {
+  min-width: 220px;
+  min-height: 42px;
+  border: 1px solid rgba(27, 60, 114, 0.14);
+  border-radius: 12px;
+  padding: 8px 12px;
+}
+
+/* ODOP brand buttons — match main website maroon, not theme blue */
+.cfc-portal-shell .btn,
+.cfc-portal-shell .btn-primary,
+.cfc-login-page .btn,
+.cfc-login-page .btn-primary {
+  background: #8a231c;
+  color: #fff;
+  border-color: #8a231c;
+  box-shadow: 0 4px 14px rgba(138, 35, 28, 0.25);
+}
+
+.cfc-portal-shell .btn-primary:hover,
+.cfc-portal-shell .btn:hover,
+.cfc-login-page .btn-primary:hover,
+.cfc-login-page .btn:hover {
+  background: #751912;
+  border-color: #751912;
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(138, 35, 28, 0.32);
+  transform: translateY(-1px);
+}
+
+.cfc-portal-shell .btn-primary:disabled,
+.cfc-portal-shell .btn:disabled,
+.cfc-login-page .btn-primary:disabled,
+.cfc-login-page .btn:disabled {
+  background: #8a231c;
+  border-color: #8a231c;
+  color: #fff;
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.cfc-portal-shell .btn-outline,
+.cfc-login-page .btn-outline {
+  background: #fff;
+  color: #8a231c;
+  border: 2px solid #8a231c;
+  box-shadow: none;
+}
+
+.cfc-portal-shell .btn-outline:hover,
+.cfc-login-page .btn-outline:hover {
+  background: #8a231c;
+  border-color: #8a231c;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.cfc-portal-shell .btn-outline:disabled,
+.cfc-login-page .btn-outline:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.cfc-login-page a {
+  color: #8a231c;
+}
+
+.cfc-login-page a:hover {
+  color: #751912;
+}
+
+.cfc-portal-thumb-row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  min-height: 44px;
+}
+
+.cfc-portal-thumb {
+  position: relative;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(27, 60, 114, 0.12);
+  background: #f1f5f9;
+}
+
+.cfc-portal-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cfc-portal-thumb-more {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 23, 42, 0.62);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.cfc-portal-thumb-empty {
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.cfc-public-tab-copy {
+  color: #7b8798;
+  margin: 0 0 16px;
+}
+
+#cfc-directory-filters button[type="submit"] {
+  grid-column: 1 / -1;
+  justify-self: start;
+}
+
+@media (max-width: 960px) {
+  .cfc-portal-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .cfc-portal-sidebar {
+    position: static;
+  }
+
+  .cfc-portal-stats,
+  .cfc-public-filters,
+  .cfc-portal-dashboard .cfc-portal-stats {
+    grid-template-columns: 1fr;
+    max-width: none;
+  }
+
+  .cfc-portal-panel--actions {
+    max-width: none;
+  }
+
+  .cfc-portal-quick-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cfc-portal-panel--profile {
+    padding: 20px 18px;
+  }
+
+  .cfc-portal-profile-list > div {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 14px 0;
+  }
+
+  .cfc-portal-panel--table .cfc-portal-table thead th:first-child,
+  .cfc-portal-panel--table .cfc-portal-table tbody td:first-child {
+    padding-left: 16px;
+  }
+
+  .cfc-portal-panel--table .cfc-portal-table thead th:last-child,
+  .cfc-portal-panel--table .cfc-portal-table tbody td:last-child {
+    padding-right: 16px;
+  }
+
+  .cfc-portal-table th,
+  .cfc-portal-table td {
+    padding: 12px 10px;
+  }
+}

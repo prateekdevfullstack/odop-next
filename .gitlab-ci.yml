@@ -1,0 +1,21 @@
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+
+  only:
+    - main
+
+  tags:
+    - node
+
+  variables:
+    CI: "false"
+
+  script:
+    - cd /home/node/odop/odop-next
+    - git pull origin main
+    - npm install
+    - npm run build
+    - pm2 restart odop_next

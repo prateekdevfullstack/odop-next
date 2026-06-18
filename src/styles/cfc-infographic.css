@@ -1,0 +1,139 @@
+.cfc-infographic-container {
+    max-width: 1200px;
+    margin: 0 auto 3.5rem;
+    padding: 0 1.5rem;
+}
+
+.cfc-infographic-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.cfc-value-chain-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    position: relative;
+}
+
+.cfc-value-card {
+    background: var(--white);
+    border: 1px solid rgba(223, 230, 238, 0.7);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.cfc-value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+    border-color: rgba(26, 68, 128, 0.2);
+}
+
+.cfc-value-badge {
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+    color: var(--white);
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 0.2rem 0.75rem;
+    border-radius: 99px;
+    box-shadow: 0 4px 10px rgba(26, 68, 128, 0.15);
+}
+
+.cfc-value-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.cfc-icon-raw {
+    background: var(--gold-light);
+    color: var(--gold);
+}
+
+.cfc-icon-machine {
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+.cfc-icon-lab {
+    background: var(--success-light);
+    color: var(--success);
+}
+
+.cfc-icon-market {
+    background: var(--secondary-light);
+    color: var(--secondary);
+}
+
+.cfc-value-info h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.cfc-value-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-body);
+    line-height: 1.6;
+}
+
+@media (min-width: 992px) {
+    .cfc-value-chain-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+
+    .cfc-value-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+        padding-top: 2.5rem;
+    }
+
+    .cfc-value-badge {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .cfc-value-icon {
+        margin-bottom: 0.75rem;
+    }
+
+    .cfc-value-chain-grid::before {
+        content: '';
+        position: absolute;
+        top: 68px;
+        left: 12%;
+        right: 12%;
+        height: 2px;
+        background: rgba(223, 230, 238, 0.6);
+        z-index: 0;
+    }
+
+    .cfc-value-icon {
+        position: relative;
+        z-index: 1;
+        border: 4px solid var(--white);
+    }
+}

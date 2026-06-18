@@ -1,0 +1,339 @@
+.achievements-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.75rem;
+    margin-bottom: 4rem;
+}
+
+.achievement-card {
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(223, 230, 238, 0.7);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.achievement-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--gold) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    border-color: rgba(234, 108, 0, 0.25);
+}
+
+.achievement-card:hover::before {
+    opacity: 1;
+}
+
+.achievement-card-icon-wrap {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.achievement-card:hover .achievement-card-icon-wrap {
+    transform: scale(1.08);
+}
+
+.icon-exports {
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+.icon-artisans {
+    background: var(--gold-light);
+    color: var(--gold);
+}
+
+.icon-cfcs {
+    background: var(--secondary-light);
+    color: var(--secondary);
+}
+
+.icon-funding {
+    background: var(--success-light);
+    color: var(--success);
+}
+
+.icon-ecommerce {
+    background: rgba(231, 76, 60, 0.08);
+    color: var(--danger);
+}
+
+.achievement-card-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.achievement-card-value {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+.achievement-card-badge {
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    vertical-align: middle;
+}
+
+.badge-growth {
+    background: var(--success-light);
+    color: var(--success);
+}
+
+.achievement-card-desc {
+    color: var(--text-body);
+    font-size: 0.94rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.comparison-wrapper {
+    margin-top: auto;
+    padding-top: 1.25rem;
+}
+
+.comparison-inner {
+    background: rgba(247, 248, 252, 0.8);
+    border-radius: 12px;
+    padding: 1rem;
+    border: 1px solid var(--border-light);
+}
+
+.comparison-label {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.35rem;
+}
+
+.comparison-label strong {
+    color: var(--text-dark);
+}
+
+.comparison-bar-bg {
+    height: 8px;
+    background: var(--border-light);
+    border-radius: 99px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 0.75rem;
+}
+
+.comparison-bar-bg:last-child {
+    margin-bottom: 0;
+}
+
+.comparison-bar-fill {
+    height: 100%;
+    border-radius: 99px;
+    transition: width 1s ease-out;
+}
+
+.fill-exports-before {
+    background: #cbd5e1;
+    width: 52%;
+}
+
+.fill-exports-after {
+    background: var(--primary);
+    width: 100%;
+}
+
+.fill-cfc-functional {
+    background: var(--success);
+    width: 38%;
+}
+
+.fill-cfc-total {
+    background: var(--secondary);
+    width: 100%;
+}
+
+.fill-ecom-before {
+    background: #e2e8f0;
+    width: 10%;
+}
+
+.fill-ecom-after {
+    background: var(--danger);
+    width: 100%;
+}
+
+.timeline-section {
+    margin-top: 5rem;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, rgba(26, 68, 128, 0.02) 0%, rgba(234, 108, 0, 0.02) 100%);
+    border-radius: 24px;
+    border: 1px solid rgba(223, 230, 238, 0.6);
+}
+
+.timeline-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 3.5rem;
+}
+
+.timeline-flow {
+    position: relative;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.timeline-flow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    width: 2px;
+    background: rgba(223, 230, 238, 0.8);
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 3rem;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: 10px;
+    top: 6px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 4px solid var(--secondary);
+    z-index: 2;
+    transition: all 0.35s ease;
+}
+
+.timeline-item:hover .timeline-marker {
+    background: var(--primary);
+    border-color: var(--primary);
+    transform: scale(1.2);
+}
+
+.timeline-year {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.35rem;
+}
+
+.timeline-content {
+    background: var(--white);
+    border: 1px solid var(--border-light);
+    border-radius: 14px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-item:hover .timeline-content {
+    box-shadow: var(--shadow-md);
+    transform: translateX(6px);
+}
+
+.timeline-content h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.15rem;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.timeline-content p {
+    margin: 0;
+    color: var(--text-body);
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+    .timeline-flow::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .timeline-item {
+        width: 50%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .timeline-item-left {
+        left: 0;
+        padding-right: 40px;
+        text-align: right;
+    }
+
+    .timeline-item-right {
+        left: 50%;
+        padding-left: 40px;
+    }
+
+    .timeline-marker {
+        left: auto;
+        right: -11px;
+    }
+
+    .timeline-item-left .timeline-marker {
+        right: -11px;
+    }
+
+    .timeline-item-right .timeline-marker {
+        left: -11px;
+    }
+
+    .timeline-item-left:hover .timeline-content {
+        transform: translateX(-6px);
+    }
+}
