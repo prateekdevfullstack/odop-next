@@ -24,6 +24,9 @@
 .DS_Store
 *.pem
 
+# large assets
+public/assets/document/pdf-attachment/_FINAL-ODOP-ENG-BOOKLET.pdf
+
 # debug
 npm-debug.log*
 yarn-debug.log*
